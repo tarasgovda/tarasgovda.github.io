@@ -1,0 +1,42 @@
+p.header {
+font-size:50px;
+}
+
+p#photos {
+font-size:40px;
+}
+
+.row .header {
+border-bottom-style: solid;
+border-bottom-color: #808080;
+border-bottom-width: 1px;
+}
+
+.aviable {
+font-size:16px;
+color: #009900;
+}
+
+.not_aviable {
+font-size:16px;
+color: #FF0000;
+}
+
+.good.col-md-3 img {
+ border-style:solid;
+ border-width:2px;
+ border-color: #000000;
+ float: left;
+}
+.good.col-md-9 li {
+ border:0;
+ height: 50px;
+}
+
+img.good_images {
+margin: 15px;
+}
+
+.order_message {
+padding-top:2em;
+}

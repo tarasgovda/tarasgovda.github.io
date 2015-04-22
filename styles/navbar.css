@@ -1,0 +1,29 @@
+.nav-container{
+	height: 70px;
+}
+
+.nav-center {
+	height: 70px;
+	position: absolute;
+	top: 50%;
+	opacity: 0.7;
+}
+
+.nav-top {
+	height: 70px;
+	position: absolute;
+	top: 0;
+}
+
+.navbar-brand {
+	font-size: 35px;
+	font-family:"Century Gothic";
+}
+
+.brand-margin{
+	margin-top: 10px;
+}
+
+.nav-list-margin {
+	margin-top: 10px;
+}
