@@ -5,8 +5,13 @@
 .nav-center {
 	height: 70px;
 	position: absolute;
-	top: 50%;
+	top: 5%;
+	transition-duration: 1s;
+}
+
+.nav-center:not(:hover) {
 	opacity: 0.7;
+	transition-duration: 1s;
 }
 
 .nav-top {
