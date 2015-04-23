@@ -34,6 +34,9 @@
 				  <a href="../home.htm">Home</a>
 				</li>
 				<li>
+				  <a href="../portfolio.htm">Home</a>
+				</li>
+				<li>
 				  <a href="../about.htm">About</a>
 				</li>
 		        <li>
@@ -76,6 +79,14 @@
       	</div>
       </div>
   </div>
+  <script type="text/javascript">
+  $(document).ready(function() {
+  	$('body').attr("style", "opacity:1");
+  	$(window).unload(function() {
+  		$('body').attr("style", "opacity:0.5");
+  	});
+  });
+  </script>
 </body>
 
 

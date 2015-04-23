@@ -6,7 +6,7 @@
 	<script src="scripts/vendor/jquery-1.11.0.min.js"></script>
 	<script src="scripts/vendor/bootstrap.min.js"></script>
 </head>
-<body>
+<body class="shadow">
 	<nav class="col-md-12 navbar navbar-default nav-top">
 		<div class="container-fluid nav-container">
 
@@ -24,6 +24,9 @@
 		      <ul class="nav navbar-nav">
 		        <li>
 				  <a href="home.htm">Home</a>
+				</li>
+				<li>
+				  <a href="portfolio.htm">Portfolio</a>
 				</li>
 				<li>
 				  <a href="about.htm">About</a>
@@ -92,5 +95,26 @@
     	</div>
 	  </div>
   </div>
+  <script type="text/javascript">
+  $(document).ready(function() {
+  	$('body').attr("style", "opacity:1");
+  	$(window).unload(function() {
+  		$('body').attr("style", "opacity:0.5");
+  	});
+  	 // var i =0; 
+		  // var backgrounds = ['background-1','background-2', 'background-3'];
+		  // var background = $('body');
+		  //               //Initial Background image setup
+		  // background.attr("id",backgrounds[i]);
+		  // i++;
+		  // setInterval(function(){ 
+
+		  // 	background.attr("id",backgrounds[i]);
+		  // 	i++;
+		  //  if(i === backgrounds.length || i > backgrounds.length)
+		  //   i = 0;
+		  // }, 5000);            
+  });
+  </script>
 </body>
 

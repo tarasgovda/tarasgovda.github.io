@@ -6,6 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="styles/home.css">
 	<script src="scripts/vendor/jquery-1.11.0.min.js"></script>
 	<script src="scripts/vendor/bootstrap.min.js"></script>
+	<title>Sofaa</title>
+	<link rel="shortcut icon" href="images/logo_demo.png">
 </head>
 <body class="background-defaults shadow">
 	<div>
@@ -22,6 +24,9 @@
     		</div>
     		<div class="collapse navbar-collapse nav-list-margin navbar-right" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
+		      	<li>
+				  <a href="home.htm">Home</a>
+				</li>
 		        <li>
 				  <a href="portfolio.htm">Portfolio</a>
 				</li>
@@ -37,7 +42,8 @@
 	</nav>
 </div>
 	 <script type="text/javascript">
-	  $(window).load(function() {           
+	  $(window).load(function() {
+	  		$('body').attr("style", "opacity:1");  
 		  var i =0; 
 		  var backgrounds = ['background-1','background-2', 'background-3'];
 		  var background = $('body');

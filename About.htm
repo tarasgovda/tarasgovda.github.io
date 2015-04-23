@@ -28,6 +28,9 @@
 				<li>
 				  <a href="portfolio.htm">Portfolio</a>
 				</li>
+				<li>
+				  <a href="about.htm">About</a>
+				</li>
 		        <li>
 				  <a href="contact_me.htm">Contact me</a>
 			    </li>
@@ -45,4 +48,12 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+  $(document).ready(function() {
+  	$('body').attr("style", "opacity:1");
+  	$(window).unload(function() {
+  		$('body').attr("style", "opacity:0.5");
+  	});
+  });
+  </script>
 </body>

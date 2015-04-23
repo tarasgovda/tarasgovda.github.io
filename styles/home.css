@@ -6,10 +6,9 @@
 }*/
 
 .background-defaults {
-	 -webkit-transition: background-image 1s ease-in-out;
-  -moz-transition: background-image 1s ease-in-out;
-  -o-transition: background-image 1s ease-in-out;
-  transition: background-image 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	 
+    -webkit-transition: background-image 1s ease-in-out;
   background-repeat: no-repeat;
 	background-origin: content-box;
 	background-size: cover !important;
@@ -17,13 +16,16 @@
 
 #background-1 {
   background:url("../images/Lighthouse.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 
 #background-2 {
    background:url("../images/Desert.jpg") no-repeat center center fixed;
+   background-size: cover;
 }
 
 #background-3 {
    background:url("../images/background.jpg") no-repeat center center fixed;
+   background-size: cover;
 }
