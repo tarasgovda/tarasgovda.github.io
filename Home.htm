@@ -40,7 +40,42 @@
 			</div>
 		</div>
 	</nav>
-</div>
+  </div>
+  <div class = "overpage" for = "first">
+	<div class="container-fluid margin-for-navbar">
+ 	  <div class="row">
+    	<div class="col-md-12" ><p class="header">First</p></div>
+  	  </div>
+  	  <div class"=row">  
+    	<div class="col-md-offset-3 col-md-3">
+			<a class="colorbox-item album-item" href="../images/first/tibet_sky.jpg" title="Tibet">
+        		<img class="album-photo" src="../images/first/tibet_sky.jpg">
+        	</a>
+      	</div>
+      </div>
+      <div class"=row">  
+    	<div class="col-md-offset-7 col-md-3">
+    		<a class="colorbox-item" href="../images/first/San-Francisco.jpg" title="Tibet">
+        		<img class="album-photo" src="../images/first/San-Francisco.jpg">
+        	</a>
+      	</div>
+      </div>
+      <div class"=row">  
+    	<div class="col-md-offset-3 col-md-3">
+    		<a class="colorbox-item" href="../images/first/x_b8a43300.jpg" title="Tibet">
+        		<img class="album-photo" src="../images/first/x_b8a43300.jpg">
+        	</a>
+      	</div>
+      </div>
+      <div class"=row">  
+    	<div class="col-md-offset-7 col-md-3">
+    		<a class="colorbox-item" href="../images/first/sussecs.jpg" title="Tibet">
+        		<img class="album-photo" src="../images/first/sussecs.jpg">
+        	</a>
+      	</div>
+      </div>
+  </div>
+  </div>
 	 <script type="text/javascript">
 	  $(window).load(function() {
 	  		$('body').attr("style", "opacity:1");  
@@ -56,7 +91,42 @@
 		  	i++;
 		   if(i === backgrounds.length || i > backgrounds.length)
 		    i = 0;
-		  }, 5000);            
+		  }, 5000);
+		  var targets = {
+        default: function () {
+          setTimeout(function() {
+            $('.overpage').removeClass('opened');
+          }, 50);
+          $('body').removeClass('overpaged');
+
+          //send google analitic pageview
+          ga('set', 'page', '/');
+          ga('send', 'pageview');
+        },
+        project: function (request) {
+          var proj = request.namedParams.projname;
+          setTimeout(function() {
+            $('.overpage[for="'+proj+'"]').addClass('opened');
+          }, 50);
+          $('body').addClass('overpaged');
+          ga('set', 'page', '/projects/' + proj);
+          ga('send', 'pageview');
+        },
+      };
+
+      Aviator.pushStateEnabled = false;
+      Aviator.setRoutes({
+        '/': {
+          target: targets,
+          '/': 'default'
+        },
+        '/projects': {
+          target: targets,
+          '/:projname': 'project',
+        }
+      });
+
+      Aviator.dispatch();         
  	  });
   </script>
 </body>

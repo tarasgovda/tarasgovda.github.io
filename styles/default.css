@@ -10,6 +10,28 @@ body {
   transition: opacity 0.6s ease-in-out;
 }
 
+body.overpaged {
+   overflow: hidden;
+}
+
+.overpage {
+  text-align: center;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: 100%;
+   z-index: 1050;
+  transition: left 0.5s;
+  -moz-transition: left 0.5s;
+}
+
+.overpage.opened {
+	 display: block;
+    left: 0%;
+}
+
 .background-defaults {
 	-moz-transition: opacity 1s ease-in-out;
 	 

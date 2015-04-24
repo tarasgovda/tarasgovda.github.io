@@ -34,7 +34,7 @@
 				  <a href="../home.htm">Home</a>
 				</li>
 				<li>
-				  <a href="../portfolio.htm">Home</a>
+				  <a href="../portfolio.htm">Portfolio</a>
 				</li>
 				<li>
 				  <a href="../about.htm">About</a>
@@ -85,6 +85,42 @@
   	$(window).unload(function() {
   		$('body').attr("style", "opacity:0.5");
   	});
+  	var targets = {
+        default: function () {
+          setTimeout(function() {
+            $('.overpage').removeClass('opened');
+          }, 50);
+          $('body').removeClass('overpaged');
+
+          //send google analitic pageview
+          ga('set', 'page', '/');
+          ga('send', 'pageview');
+        },
+        project: function (request) {
+          var proj = request.namedParams.projname;
+          setTimeout(function() {
+            $('.overpage[for="'+proj+'"]').addClass('opened');
+          }, 50);
+          $('body').addClass('overpaged');
+          ga('set', 'page', '/projects/' + proj);
+          ga('send', 'pageview');
+        },
+      };
+
+      Aviator.pushStateEnabled = false;
+      Aviator.setRoutes({
+        '/': {
+          target: targets,
+          '/': 'default'
+        },
+        '/projects': {
+          target: targets,
+          '/:projname': 'project',
+        }
+      });
+
+      Aviator.dispatch();
+
   });
   </script>
 </body>
