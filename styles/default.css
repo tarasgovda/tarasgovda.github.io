@@ -15,16 +15,19 @@ body.overpaged {
 }
 
 .overpage {
-  text-align: center;
-  position: fixed;
-  overflow: auto;
-  top: 0;
+ text-align: center;
+  position: absolute;
+  overflow-x: auto;
+  overflow-y: scroll;
+  top: 5%;
   bottom: 0;
   width: 100%;
   left: 100%;
-   z-index: 1050;
+  background-color: #fff;
+  z-index: 1050;
   transition: left 0.5s;
   -moz-transition: left 0.5s;
+  opacity: 1;
 }
 
 .overpage.opened {
@@ -92,6 +95,7 @@ p.header {
 	font-size:23px;
 	text-align:center;
 	vertical-align:middle;
+	transition-duration: 1s;
 }
 
 .cell-element img {
@@ -99,11 +103,18 @@ p.header {
 	width: 150px;
 	height: 150px;
 	border: 0;
+	transition-duration: 1s;
+	opacity: 1;
 }
 
 .cell-element p {
-	color:#808080;
+	color:#000000;
 }
+
+.cell-element:not(:hover) {
+	opacity: 0.75;
+}
+
 
 .about-avatar{
 	background: url("../images/sofaa.jpg");
@@ -160,3 +171,19 @@ a.logo-link:not(:hover) {
 	height: 100%;
 	background-color: rgb(207, 196, 196);
 }
+
+line {
+    stroke: #808080;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+  }
+
+svg:hover line {
+    stroke: #000000;
+ }
+
+ .navigate-col {
+ 	height: 100%;
+ 	position: fixed;
+ 	top:45%;
+ }

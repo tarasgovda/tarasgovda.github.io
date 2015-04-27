@@ -7,120 +7,58 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="../scripts/vendor/jquery.colorbox.js"></script>
 	<script src="../scripts/vendor/bootstrap.min.js"></script>
-	<script>
-		$(document).ready(function(){
-					$(".colorbox-item").colorbox({rel:'colorbox-item', transition:"fade", height:"90%"});
-				});
-	</script>
 </head>
-<body>
-
-	<nav class="col-md-12 navbar navbar-default nav-top">
-		<div class="container-fluid nav-container">
-
-			<div class="navbar-header brand-margin">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="brand navbar-brand" href="#">Sofaa</a>
-
-    		</div>
-    		<div class="collapse navbar-collapse nav-list-margin navbar-right" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav">
-		        <li>
-				  <a href="../home.htm">Home</a>
-				</li>
-				<li>
-				  <a href="../portfolio.htm">Portfolio</a>
-				</li>
-				<li>
-				  <a href="../about.htm">About</a>
-				</li>
-		        <li>
-				  <a href="../contact_me.htm">Contact me</a>
-			    </li>
-		      </ul>
-			</div>
-		</div>
-	</nav>
-	<div class="container-fluid margin-for-navbar">
- 	  <div class="row">
-    	<div class="col-md-12" ><p class="header">First</p></div>
-  	  </div>
-  	  <div class"=row">  
-    	<div class="col-md-offset-3 col-md-3">
-			<a class="colorbox-item album-item" href="../images/first/tibet_sky.jpg" title="Tibet">
-        		<img class="album-photo" src="../images/first/tibet_sky.jpg">
-        	</a>
-      	</div>
+<body class = "overpage">
+	<div class="container-fluid">
+    <div class = "row">
+   	  <div class="row">
+      	<div class="col-md-12" ><p class="header">First</p></div>
+    	 </div>
+       <div class ="col-lg-1 navigate-col">
+        <a href = "../portfolio.htm">
+          <svg viewbox='0 0 36 100' width = '100px' height = '100px'>
+            <line x1='35.9', y1='0.5', x2='0.8', y2='54.1'/>
+            <line x1='35.9', y1='99.5', x2='0.8', y2='54.1'/>
+         </svg>
+       </a>
       </div>
-      <div class"=row">  
-    	<div class="col-md-offset-7 col-md-3">
-    		<a class="colorbox-item" href="../images/first/San-Francisco.jpg" title="Tibet">
-        		<img class="album-photo" src="../images/first/San-Francisco.jpg">
-        	</a>
-      	</div>
-      </div>
-      <div class"=row">  
-    	<div class="col-md-offset-3 col-md-3">
-    		<a class="colorbox-item" href="../images/first/x_b8a43300.jpg" title="Tibet">
-        		<img class="album-photo" src="../images/first/x_b8a43300.jpg">
-        	</a>
-      	</div>
-      </div>
-      <div class"=row">  
-    	<div class="col-md-offset-7 col-md-3">
-    		<a class="colorbox-item" href="../images/first/sussecs.jpg" title="Tibet">
-        		<img class="album-photo" src="../images/first/sussecs.jpg">
-        	</a>
-      	</div>
-      </div>
+    	  <div class"=row">  
+      	<div class="col-md-offset-2 col-md-3">
+  			<a class="colorbox-item album-item" href="../images/first/tibet_sky.jpg" title="Tibet">
+          		<img class="album-photo" src="../images/first/tibet_sky.jpg">
+          	</a>
+        	</div>
+        </div>
+        <div class"=row">  
+      	<div class="col-md-offset-7 col-md-3">
+      		<a class="colorbox-item" href="../images/first/San-Francisco.jpg" title="Tibet">
+          		<img class="album-photo" src="../images/first/San-Francisco.jpg">
+          	</a>
+        	</div>
+        </div>
+        <div class"=row">  
+      	<div class="col-md-offset-2 col-md-3">
+      		<a class="colorbox-item" href="../images/first/x_b8a43300.jpg" title="Tibet">
+          		<img class="album-photo" src="../images/first/x_b8a43300.jpg">
+          	</a>
+        	</div>
+        </div>
+        <div class"=row">  
+      	<div class="col-md-offset-7 col-md-3">
+      		<a class="colorbox-item" href="../images/first/sussecs.jpg" title="Tibet">
+          		<img class="album-photo" src="../images/first/sussecs.jpg">
+          	</a>
+        	</div>
+        </div>
+    </div>
   </div>
   <script type="text/javascript">
   $(document).ready(function() {
-  	$('body').attr("style", "opacity:1");
+    $(".colorbox-item").colorbox({rel:'colorbox-item', transition:"fade", height:"90%"});
+    $('body').addClass("opened");
   	$(window).unload(function() {
-  		$('body').attr("style", "opacity:0.5");
+      $('body').removeClass("opened");
   	});
-  	var targets = {
-        default: function () {
-          setTimeout(function() {
-            $('.overpage').removeClass('opened');
-          }, 50);
-          $('body').removeClass('overpaged');
-
-          //send google analitic pageview
-          ga('set', 'page', '/');
-          ga('send', 'pageview');
-        },
-        project: function (request) {
-          var proj = request.namedParams.projname;
-          setTimeout(function() {
-            $('.overpage[for="'+proj+'"]').addClass('opened');
-          }, 50);
-          $('body').addClass('overpaged');
-          ga('set', 'page', '/projects/' + proj);
-          ga('send', 'pageview');
-        },
-      };
-
-      Aviator.pushStateEnabled = false;
-      Aviator.setRoutes({
-        '/': {
-          target: targets,
-          '/': 'default'
-        },
-        '/projects': {
-          target: targets,
-          '/:projname': 'project',
-        }
-      });
-
-      Aviator.dispatch();
-
   });
   </script>
 </body>

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <head>
 	<link rel="stylesheet" type="text/css" href="styles/vendor/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="styles/navbar.css">
 	<link rel="stylesheet" type="text/css" href="styles/default.css">
+	<link rel="stylesheet" type="text/css" href="styles/navbar.css">
+	<link rel="stylesheet" type="text/css" href="styles/home.css">
 	<script src="scripts/vendor/jquery-1.11.0.min.js"></script>
 	<script src="scripts/vendor/bootstrap.min.js"></script>
+	<title>Sofaa</title>
+	<link rel="shortcut icon" href="images/logo_demo.png">
 </head>
-<body class="shadow">
-	<nav class="col-md-12 navbar navbar-default nav-top">
+<body class="background-defaults shadow">
+	<div>
+		<nav class="col-md-12 navbar navbar-default nav-center">
 		<div class="container-fluid nav-container">
-
 			<div class="navbar-header brand-margin">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 		        <span class="sr-only">Toggle navigation</span>
@@ -18,14 +21,13 @@
 		        <span class="icon-bar"></span>
 		      </button>
 		      <a class="brand navbar-brand" href="#">Sofaa</a>
-
     		</div>
     		<div class="collapse navbar-collapse nav-list-margin navbar-right" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li>
+		      	<li>
 				  <a href="index.htm">Home</a>
 				</li>
-				<li>
+		        <li>
 				  <a href="portfolio.htm">Portfolio</a>
 				</li>
 				<li>
@@ -38,62 +40,6 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container-fluid margin-for-navbar">
- 	  <div class="row">
-    	<div class="col-md-12" ><p class="header">Portfolio</p></div>
-  	  </div>
-  	  <div class"=row">  
-    	<div class="col-md-4">
-      	  <div class="cell-element">
-        	<a href="albums/First.htm">
-              <img src="images/background.jpg" alt="image">
-	     	  <p>First</p>
-			</a>
-      	  </div>
-    	</div>
-    	<div class="col-md-4">
-      	  <div class="cell-element">
-        	<a href="#">
-              <img src="images/background.jpg" alt="image">
-	     	  <p>Second</p>
-			</a>
-      	  </div>
-    	</div>
-    	<div class="col-md-4">
-      	  <div class="cell-element">
-        	<a href="#">
-              <img src="images/background.jpg" alt="image">
-	     	  <p>Third</p>
-			</a>
-      	  </div>
-    	</div>
-	  </div>
-	   <div class"=row">  
-    	<div class="col-md-4">
-      	  <div class="cell-element">
-        	<a href="#">
-              <img src="images/background.jpg" alt="image">
-	     	  <p>Fourth</p>
-			</a>
-      	  </div>
-    	</div>
-    	<div class="col-md-4">
-      	  <div class="cell-element">
-        	<a href="#">
-              <img src="images/background.jpg" alt="image">
-	     	  <p>Fifth</p>
-			</a>
-      	  </div>
-    	</div>
-    	<div class="col-md-4">
-      	  <div class="cell-element">
-        	<a href="#">
-              <img src="images/background.jpg" alt="image">
-	     	  <p>Sixth</p>
-			</a>
-      	  </div>
-    	</div>
-	  </div>
   </div>
   <div class = "overpage" for = "first">
 	<div class="container-fluid margin-for-navbar">
@@ -130,13 +76,23 @@
       </div>
   </div>
   </div>
-  <script type="text/javascript">
-  $(document).ready(function() {
-  	$('body').attr("style", "opacity:1");
-  	$(window).unload(function() {
-  		$('body').attr("style", "opacity:0.5");
-  	});
-  	var targets = {
+	 <script type="text/javascript">
+	  $(window).load(function() {
+	  		$('body').attr("style", "opacity:1");  
+		  var i =0; 
+		  var backgrounds = ['background-1','background-2', 'background-3'];
+		  var background = $('body');
+		                //Initial Background image setup
+		  background.attr("id",backgrounds[i]);
+		  i++;
+		  setInterval(function(){ 
+
+		  	background.attr("id",backgrounds[i]);
+		  	i++;
+		   if(i === backgrounds.length || i > backgrounds.length)
+		    i = 0;
+		  }, 5000);
+		  var targets = {
         default: function () {
           setTimeout(function() {
             $('.overpage').removeClass('opened');
@@ -170,21 +126,8 @@
         }
       });
 
-      Aviator.dispatch();      
-  	 // var i =0; 
-		  // var backgrounds = ['background-1','background-2', 'background-3'];
-		  // var background = $('body');
-		  //               //Initial Background image setup
-		  // background.attr("id",backgrounds[i]);
-		  // i++;
-		  // setInterval(function(){ 
-
-		  // 	background.attr("id",backgrounds[i]);
-		  // 	i++;
-		  //  if(i === backgrounds.length || i > backgrounds.length)
-		  //   i = 0;
-		  // }, 5000);            
-  });
+      Aviator.dispatch();         
+ 	  });
   </script>
 </body>
 
