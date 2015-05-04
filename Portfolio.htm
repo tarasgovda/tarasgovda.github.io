@@ -8,6 +8,7 @@
   <script src="scripts/vendor/jquery.colorbox.js"></script>
 	<script src="scripts/vendor/bootstrap.min.js"></script>
 </head>
+<html>
 <body class="shadow">
 	<nav class="col-md-12 navbar navbar-default nav-top">
 		<div class="container-fluid nav-container">
@@ -97,57 +98,15 @@
     	</div>
 	  </div>
   </div>
-  <div class = "albums">
-    <div id="first-album" class = "overpage">
-    <div class="container-fluid">
-    <div class = "row">
-      <div class="row">
-        <div class="col-md-12" ><p class="header">First</p></div>
-       </div>
-       <div class ="col-lg-1 navigate-col">
-        <a href = "#" class = "portfolio-link">
-          <svg viewbox='0 0 36 100' width = '100px' height = '100px'>
-            <line x1='35.9', y1='0.5', x2='0.8', y2='54.1'/>
-            <line x1='35.9', y1='99.5', x2='0.8', y2='54.1'/>
-         </svg>
-       </a>
-      </div>
-        <div class"=row">  
-        <div class="col-md-offset-2 col-md-3">
-        <a class="colorbox-item album-item" href="images/first/tibet_sky.jpg" title="Tibet">
-              <img class="album-photo" src="images/first/tibet_sky.jpg">
-            </a>
-          </div>
-        </div>
-        <div class"=row">  
-        <div class="col-md-offset-7 col-md-3">
-          <a class="colorbox-item" href="images/first/San-Francisco.jpg" title="Tibet">
-              <img class="album-photo" src="images/first/San-Francisco.jpg">
-            </a>
-          </div>
-        </div>
-        <div class"=row">  
-        <div class="col-md-offset-2 col-md-3">
-          <a class="colorbox-item" href="images/first/x_b8a43300.jpg" title="Tibet">
-              <img class="album-photo" src="images/first/x_b8a43300.jpg">
-            </a>
-          </div>
-        </div>
-        <div class"=row">  
-        <div class="col-md-offset-7 col-md-3">
-          <a class="colorbox-item" href="images/first/sussecs.jpg" title="Tibet">
-              <img class="album-photo" src="images/first/sussecs.jpg">
-            </a>
-          </div>
-        </div>
-    </div>
-    </div>
-  </div>
+  <div id="albums">
+   
 
   </div>
   <script type="text/javascript">
   $(document).ready(function() {
+    $("#albums").load("albums/Firsttoload.htm");
     var albumId;
+    var opened = false;
     $(".colorbox-item").colorbox({rel:'colorbox-item', transition:"fade", height:"90%"});
   	$('body').attr("style", "opacity:1");
   	$(window).unload(function() {
@@ -155,12 +114,24 @@
   	});
     $(document).on("click", ".album-link", function(){
       albumId = "#" + $(this).attr('id') + "-album";
+      opened = true;
       $(albumId).addClass("opened");
     });
     $(document).on("click", ".portfolio-link", function(){
       $(albumId).removeClass("opened");
+       opened = false;
     });
+
+    if(opened) {
+      if($(window).scrollTop() == 0) {
+        $(".scroll-top-arrow").hide();
+      } else {
+        alert("not 0");
+        $(".scroll-top-arrow").show();
+      }
+  }
   });
   </script>
 </body>
+</html>
 

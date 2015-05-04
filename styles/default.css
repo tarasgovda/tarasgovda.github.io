@@ -189,3 +189,13 @@ svg:hover line {
  	position: fixed;
  	top:45%;
  }
+
+ .scroll-top-arrow {
+ 	bottom: 0;
+ 	position:fixed;
+ 	margin-left: 20px;
+ }
+
+ .opened .scroll-top-arrow {
+	right:2%;
+ }
