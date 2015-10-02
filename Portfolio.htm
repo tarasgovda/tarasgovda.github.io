@@ -48,25 +48,25 @@
   	  <div class"=row">  
     	<div class="col-md-4">
       	  <div class="cell-element">
-        	<a href="#" id="first" class ="album-link">
-              <img src="images/background.jpg" alt="image">
-	     	  <p>First</p>
+        	<a href="#" id="Khristya" class ="album-link">
+              <img src="images\khristya\IMG_1316.jpg" alt="image">
+	     	  <p>Khristya</p>
 			</a>
       	  </div>
     	</div>
     	<div class="col-md-4">
       	  <div class="cell-element">
-        	<a href="#">
-              <img src="images/albums/sussecs.jpg" alt="image">
-	     	  <p>Second</p>
+        	<a href="#" id="Dinara" class ="album-link">
+              <img src="images/Dinara/IMG_6148.jpg" alt="image">
+	     	  <p>Dinara</p>
 			</a>
       	  </div>
     	</div>
     	<div class="col-md-4">
       	  <div class="cell-element">
-        	<a href="#">
-              <img src="images/albums/Koala.jpg" alt="image">
-	     	  <p>Third</p>
+        	<a href="#" id="MartaSanya" class ="album-link">
+              <img src="images/MartaSanya/IMG_5099.jpg" alt="image">
+	     	  <p>MartaSanya</p>
 			</a>
       	  </div>
     	</div>
@@ -74,16 +74,16 @@
 	   <div class"=row">  
     	<div class="col-md-4">
       	  <div class="cell-element">
-        	<a href="#">
-              <img src="images/albums/Penguins.jpg" alt="image">
-	     	  <p>Fourth</p>
+        	<a href="#" id="YarkoNastya" class ="album-link">
+              <img src="images/YarkoNastya/IMG_9462.jpg" alt="image">
+	     	  <p>YarkoNastya</p>
 			</a>
       	  </div>
     	</div>
     	<div class="col-md-4">
       	  <div class="cell-element">
         	<a href="#">
-              <img src="images/albums/Chrysanthemum.jpg" alt="image">
+              <img src="images/albums/sussecs.jpg" alt="image">
 	     	  <p>Fifth</p>
 			</a>
       	  </div>
@@ -106,15 +106,21 @@
   $(document).ready(function() {
    
     var albumId;
+    var prevAlbum;
     var opened = false;
     
   	$('body').attr("style", "opacity:1");
-    $("#albums").load("albums/Firsttoload.htm");
+    
+    // $("#albums").load("albums/Dinara.htm");
+    // $("#albums").load("albums/MartaSanya.htm");
+    // $("#albums").load("albums/YarkoNastya.htm");
   	$(window).unload(function() {
   		$('body').attr("style", "opacity:0.5");
   	});
     $(document).on("click", ".album-link", function(){
+
       albumId = "#" + $(this).attr('id') + "-album";
+      $("#albums").load("albums/" + $(this).attr('id') + ".htm");
       opened = true;
       $(".colorbox-item").colorbox({rel:'colorbox-item', transition:"fade", height:"90%"});
       $(albumId).addClass("opened");
