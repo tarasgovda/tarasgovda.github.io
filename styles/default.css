@@ -5,6 +5,7 @@ body {
 	font-size:18px;
 	opacity: 0.5;
 	overflow: hidden;
+	height: 100%;
 	-webkit-transition: opacity 0.6s ease-in-out;
   -moz-transition: opacity 0.6s ease-in-out;
   -o-transition: opacity 0.6s ease-in-out;
@@ -35,13 +36,13 @@ body.overpaged {
 .overpage.opened {
 	 display: block;
     left: 0%;
+    height: 100%;
 }
 
 .background-defaults {
 	-moz-transition: opacity 1s ease-in-out;
-	 
     -webkit-transition: background-image 1s ease-in-out;
-  background-repeat: no-repeat;
+  	background-repeat: no-repeat;
 	background-origin: content-box;
 	background-size: cover !important;
 }
