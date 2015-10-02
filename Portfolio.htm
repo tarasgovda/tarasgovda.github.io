@@ -84,18 +84,18 @@
       	  <div class="cell-element">
         	<a href="#">
               <img src="images/albums/sussecs.jpg" alt="image">
-	     	  <p>Fifth</p>
+	     	  <p>To be continued...</p>
 			</a>
       	  </div>
     	</div>
-    	<div class="col-md-4">
+    	<!-- <div class="col-md-4">
       	  <div class="cell-element">
         	<a href="#">
               <img src="images/albums/Lighthouse.jpg" alt="image">
 	     	  <p>Sixth</p>
 			</a>
       	  </div>
-    	</div>
+    	</div> -->
 	  </div>
   </div>
   <div id="albums">
@@ -117,18 +117,38 @@
   	$(window).unload(function() {
   		$('body').attr("style", "opacity:0.5");
   	});
-    $(document).on("click", ".album-link", function(){
+    $(document).on("click", ".album-link", function(callback){
 
       albumId = "#" + $(this).attr('id') + "-album";
       $("#albums").load("albums/" + $(this).attr('id') + ".htm");
       opened = true;
-      $(".colorbox-item").colorbox({rel:'colorbox-item', transition:"fade", height:"90%"});
+     
       setTimeout(function(){
-        console.log(2);
+        console.log(2); 
+        $(".colorbox-item").colorbox({rel:'colorbox-item', transition:"fade", height:"90%"});
         $(albumId).addClass("opened");
       },1000);
+
+      // var id = $(this).attr('id');
+
+      // loadAlbum(addClasses, id);
       
     });
+
+    function loadAlbum(callback, id) {
+      albumId = "#" + id + "-album";
+      $("#albums").load("albums/" + id + ".htm");
+      opened = true;
+
+      callback(albumId);
+    }
+
+    function addClasses(albumId) {
+       $(".colorbox-item").colorbox({rel:'colorbox-item', transition:"fade", height:"90%"});
+        $(albumId).addClass("opened");
+      };
+
+
     $(document).on("click", ".portfolio-link", function(){
       $(albumId).removeClass("opened");
        opened = false;
