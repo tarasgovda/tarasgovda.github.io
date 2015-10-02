@@ -123,7 +123,11 @@
       $("#albums").load("albums/" + $(this).attr('id') + ".htm");
       opened = true;
       $(".colorbox-item").colorbox({rel:'colorbox-item', transition:"fade", height:"90%"});
-      $(albumId).addClass("opened");
+      setTimeout(function(){
+        console.log(2);
+        $(albumId).addClass("opened");
+      },1000);
+      
     });
     $(document).on("click", ".portfolio-link", function(){
       $(albumId).removeClass("opened");
