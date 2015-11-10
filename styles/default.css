@@ -1,6 +1,7 @@
 
 body {
-	color:#808080;
+	/*color:#808080;*/
+	color: #000000:;
 	font-family:"Century Gothic";
 	font-size:18px;
 	opacity: 0.5;
@@ -47,7 +48,7 @@ body.overpaged {
 	background-size: cover !important;
 }
 
-#background-1 {
+/*#background-1 {
   background:url("../images/Lighthouse.jpg") no-repeat center center fixed;
   background-size: cover;
 }
@@ -61,7 +62,7 @@ body.overpaged {
 #background-3 {
    background:url("../images/background.jpg") no-repeat center center fixed;
    background-size: cover;
-}
+}*/
 
 a:link {
 	outline: 0;
@@ -119,8 +120,21 @@ p.header {
 }
 
 
+/*About*/
+
+body#about-page {
+	background-color: none;
+}
+
+#about-page {
+	background: url("../images/Dinara/IMG_6223.jpg");
+	background-repeat: no-repeat;
+	background-origin: content-box;
+	background-size: cover !important;
+}
+
 .about-avatar{
-	background: url("../images/sofaa.jpg");
+	background: url("../images/about_avatar.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -135,6 +149,16 @@ p.header {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+.about-center {
+	background-color: #fff;
+	opacity: 0.7;
+}
+
+.about-center:hover {
+	opacity: 1;
+	transition-duration: 2s;
 }
 
 .about-header{
@@ -175,6 +199,11 @@ a.logo-link:not(:hover) {
 	background-color: rgb(207, 196, 196);
 }
 
+/*html, body {
+    margin: 0;
+    height: 100%;
+}*/
+
 line {
     stroke: #808080;
     stroke-width: 2;
@@ -200,3 +229,4 @@ svg:hover line {
  .opened .scroll-top-arrow {
 	right:2%;
  }
+
