@@ -4,7 +4,7 @@
 }
 
 .nav-center {
-	height: 70px;
+	height: 73px;
 	position: absolute;
 	top: 5%;
 	transition-duration: 2s;
@@ -16,7 +16,7 @@
 }
 
 .nav-top {
-	height: 70px;
+	height: 73px;
 	position: absolute;
 	top: 0;
 }
