@@ -15,6 +15,8 @@
       albumId = "#" + $(this).attr('id') + "-album";
       $("#albums").load("albums/" + $(this).attr('id') + ".htm");
       opened = true;
+      var body = $('body');
+      body.css('overflow-y', 'hidden');
      
       setTimeout(function(){
         console.log(2); 
@@ -54,6 +56,8 @@
 
     $(document).on("click", ".portfolio-link", function(){
       $(albumId).removeClass("opened");
+      var body = $('body');
+      body.css('overflow-y', 'scroll');
        opened = false;
     });
 
