@@ -1,7 +1,7 @@
 
 body {
 	/*color:#808080;*/
-	color: #000000:;
+	color: #000000;
 	font-family:"Century Gothic";
 	font-size:18px;
 	opacity: 0.5;
@@ -11,7 +11,11 @@ body {
   -moz-transition: opacity 0.6s ease-in-out;
   -o-transition: opacity 0.6s ease-in-out;
   transition: opacity 0.6s ease-in-out;
+
+  background-color: white;
 }
+
+/*possible colors: #F0FFFF  #F1EBEB  #FFF9EF*/
 
 body.overpaged {
    overflow: hidden;
@@ -102,10 +106,11 @@ p.header {
 	transition-duration: 1s;
 }
 
-.cell-element img {
+.album-logo {
 	border-radius: 100%;
-	width: 7em;
-	height: 7em;
+	/*width: 7em;
+	height: 7em;*/
+	width: 60%;
 	border: 0;
 	transition-duration: 1s;
 	opacity: 1;
@@ -116,7 +121,7 @@ p.header {
 }
 
 .cell-element:not(:hover) {
-	opacity: 0.75;
+	opacity: 0.85;
 }
 
 
@@ -138,8 +143,8 @@ body#about-page {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	width: 10em;
-	height: 10em;
+	width: 20%;
+	/*height: 50%;*/
 	border-radius: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -174,8 +179,13 @@ body#about-page {
 .album-photo {
 	/*height: 250px;
 	width: 250px;*/
-	height: 13em;
-	width: 13em;
+	/*height: 13em;
+	width: 13em;*/
+	/*height: 75%;*/
+	width: 75%;
+	/*width: 50%;
+	height: auto;
+	padding-top: 50%;*/
 	border-radius: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -183,8 +193,9 @@ body#about-page {
 }
 
 .logo-image {
-	height: 1em;
-	width: 1em;
+	/*height: 1em;
+	width: 1em;*/
+	width: 4%;
 }
 
 a.logo-link:not(:hover) {

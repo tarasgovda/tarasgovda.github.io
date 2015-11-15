@@ -64,9 +64,18 @@
 	<script type="text/javascript">
   		$(document).ready(function() {
 	  	$('body').attr("style", "opacity:1");
+	  	setResponsiveHeight('logo-image');
 	  	$(window).unload(function() {
 	  		$('body').attr("style", "opacity:0.5");
 	  	});
+
+
+	  	function setResponsiveHeight(className) {
+	       	var div = $(className);
+	        var width = div.width();
+
+	        div.css('height', width);
+    	}
   	});
   </script>
 </body>
