@@ -3,6 +3,7 @@
     var albumId;
     var prevAlbum;
     var opened = false;
+    var scrollPos;
     
   	$('body').attr("style", "opacity:1");
     setResponsiveHeight('.album-logo');
@@ -12,13 +13,20 @@
   	});
     $(document).on("click", ".album-link", function(callback){
 
+      scrollPos = $('body').scrollTop();
+
+      // $('body').animate({ scrollTop: 0 }, "slow");
       albumId = "#" + $(this).attr('id') + "-album";
       $("#albums").load("albums/" + $(this).attr('id') + ".htm");
-      opened = true;
-      var body = $('body');
-      body.css('overflow-y', 'hidden');
+      
+        opened = true;
+        var body = $('body');
+        body.css('overflow-y', 'hidden');
+      
      
       setTimeout(function(){
+
+       
         console.log(2); 
         $(".colorbox-item").colorbox({rel:'colorbox-item', transition:"fade", height:"90%"});
         $(albumId).addClass("opened");
@@ -59,6 +67,7 @@
       var body = $('body');
       body.css('overflow-y', 'scroll');
        opened = false;
+       body.animate({ scrollTop: scrollPos }, "slow");
     });
 
     // if(opened) {
