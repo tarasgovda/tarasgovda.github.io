@@ -1,2 +1,70 @@
-Hello World!
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles/vendor/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/default.css">
+	<link rel="stylesheet" type="text/css" href="styles/navbar.css">
+	<link rel="stylesheet" type="text/css" href="styles/home.css">
+	<script src="scripts/vendor/jquery-1.11.0.min.js"></script>
+	<script src="scripts/vendor/bootstrap.min.js"></script>
+	<title>Sofaa</title>
+	<link rel="shortcut icon" href="images/logo_demo.png">
+</head>
+<body class="background-defaults shadow">
+	<div>
+		<nav class="col-md-12 navbar navbar-default nav-center">
+		<div class="container-fluid nav-container">
+			<div class="navbar-header brand-margin">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="brand navbar-brand" href="#">Sofaa</a>
+    		</div>
+    		<div class="collapse navbar-collapse nav-list-margin navbar-right" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		      	<li>
+				  <a href="index.htm">Home</a>
+				</li>
+		        <li>
+				  <a href="portfolio.htm">Portfolio</a>
+				</li>
+				<li>
+				  <a href="about.htm">About</a>
+				</li>
+		        <li>
+				  <a href="contact_me.htm">Contact me</a>
+			    </li>
+		      </ul>
+			</div>
+		</div>
+	</nav>
+</div>
+	 <script type="text/javascript">
+	  $(window).load(function() {
+  		$('body').attr("style", "opacity:1"); 
+      var chrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
+      var safari = /safari/.test(navigator.userAgent.toLowerCase());
+      var opera = /op/.test(navigator.userAgent.toLowerCase());
+      var mozilla = /firefox/.test(navigator.userAgent.toLowerCase()); 
+      var ie = /msie/.test(navigator.userAgent.toLowerCase());  
+		  var i =0; 
+		  var backgrounds = ['background-1','background-2', 'background-3'];
+		  var background = $('body');
+		                //Initial Background image setup
+		  background.attr("id",backgrounds[i]);
+      if(chrome || op || safari) {
+		  i++;
+		  setInterval(function(){ 
+
+		  	background.attr("id",backgrounds[i]);
+		  	i++;
+		   if(i === backgrounds.length || i > backgrounds.length)
+		    i = 0;
+		  }, 10000);
+    }
+ 	  });
+  </script>
+</body>
 
