@@ -20,8 +20,6 @@
       $("#albums").load("albums/" + $(this).attr('id') + ".htm");
       
         opened = true;
-        var body = $('body');
-        body.css('overflow-y', 'hidden');
       
      
       setTimeout(function(){
@@ -30,6 +28,8 @@
         console.log(2); 
         $(".colorbox-item").colorbox({rel:'colorbox-item', transition:"fade", height:"90%"});
         $(albumId).addClass("opened");
+        var body = $('body');
+        body.css('overflow-y', 'hidden');
        
        setResponsiveHeight('.album-photo');
       },1000);
