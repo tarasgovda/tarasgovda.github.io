@@ -116,6 +116,9 @@ p.header {
 	opacity: 1;
 }
 
+.album-link {
+	cursor: pointer;
+}
 .cell-element p {
 	color:#000000;
 }

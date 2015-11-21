@@ -15,7 +15,7 @@
 
       scrollPos = $('body').scrollTop();
 
-      // $('body').animate({ scrollTop: 0 }, "slow");
+       $('body').animate({ scrollTop: 0 }, "slow");
       albumId = "#" + $(this).attr('id') + "-album";
       $("#albums").load("albums/" + $(this).attr('id') + ".htm");
       
