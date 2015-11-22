@@ -8,8 +8,11 @@
   	$('body').attr("style", "opacity:1");
     setResponsiveHeight('.album-logo');
 
-    
+
     $("#albums").load("albums/" + "Khristya" + ".htm");
+    $("#albums").load("albums/" + "Dinara" + ".htm");
+    $("#albums").load("albums/" + "MartaSanya" + ".htm");
+    $("#albums").load("albums/" + "YarkoNastya" + ".htm");
     
   	$(window).unload(function() {
   		$('body').attr("style", "opacity:0.5");
