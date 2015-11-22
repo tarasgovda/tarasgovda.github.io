@@ -1,7 +1,7 @@
 
 @font-face{
 	font-family: "MyFont";
-  	src: url("../fonts/ufonts.com_century-gothic.ttf") format("truetype");
+  	src: local("../fonts/ufonts.com_century-gothic.ttf") format("truetype");
 }
 
 
