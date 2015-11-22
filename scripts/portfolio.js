@@ -7,6 +7,9 @@
     
   	$('body').attr("style", "opacity:1");
     setResponsiveHeight('.album-logo');
+
+    
+    $("#albums").load("albums/" + "Khristya" + ".htm");
     
   	$(window).unload(function() {
   		$('body').attr("style", "opacity:0.5");
