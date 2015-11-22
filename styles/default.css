@@ -1,8 +1,14 @@
 
+@font-face{
+	font-family: "MyFont";
+  	src: url("../fonts/ufonts.com_century-gothic.ttf") format("truetype");
+}
+
+
 body {
 	/*color:#808080;*/
 	color: #584F4F;
-	font-family:"Century Gothic";
+	font-family:"MyFont";
 	font-size:21px;
 	opacity: 0.5;
 	overflow-x: hidden;
