@@ -1,7 +1,7 @@
 
 @font-face{
 	font-family: "MyFont";
-  	src: local("../fonts/ufonts.com_century-gothic.ttf") format("truetype");
+  	src: url("../fonts/Karmakooma.ttf") format("truetype");
 }
 
 
