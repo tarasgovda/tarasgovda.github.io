@@ -1,7 +1,7 @@
 
 body {
 	/*color:#808080;*/
-	color: #000000;
+	color: #584F4F;
 	font-family:"Century Gothic";
 	font-size:21px;
 	opacity: 0.5;
@@ -12,7 +12,7 @@ body {
   -o-transition: opacity 0.6s ease-in-out;
   transition: opacity 0.6s ease-in-out;
 
-  background-color: white;
+ background-color: #FBF9F9;
 }
 
 /*possible colors: #F0FFFF  #F1EBEB  #FFF9EF*/
