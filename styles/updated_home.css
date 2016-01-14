@@ -8,21 +8,28 @@
   	src: url("../fonts/ufonts.com_century-gothic.ttf") format("truetype");
 }
 
-body {
+html, body {
 	background-color: #352F2F;
 	color: gray;
+	height: 100%;
 	overflow-y: hidden; 
+}
+
+.full-height {
+	height: 100%;
 }
 
 .main-column {
 	background-color: white;
-	height: 100vh;
+	/*height: 100vh;*/
+	height: 100%;
 }
 
 .header {
 	text-align: center;
 	font-family: "HeaderFont";
 	font-size: 40px;
+	min-height: 13%;
 }
 
 .sofaa-name {
@@ -34,7 +41,14 @@ body {
 	border-color: transparent;
 	font-size: 22px;
 	font-family: "RegularFont";
+	min-height: 7%;
 }
+
+/*.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}*/
 
 /*.navbar-center ul {
 	width: 70%;
@@ -48,27 +62,36 @@ body {
 	/*margin-left: 11%;*/
 }
 
+.navbar-center {
+	width: 100%;
+	text-align: center;
+}
+
 .list-div {
-	width: 50%;
-	margin: 0 auto;
+	display: inline-block;
 }
 
 .photo-section {
-	height: 100%;
+	height: 62%;
 	margin-top: 2%;
 }
 
+
 .photo-row {
-	height: 18%;
-	margin-left: 5%;
+	height: 30%;
+	width: 100%;
+	margin-left: 7%;
+	text-align: center;
+	
 }
 
 .photo-div {
 	margin-right: 2%;
 	margin-left: 2%;
 	margin-bottom: 3%;
-	width: 18%;
 	height: 100%;
+	display: inline-block;
+	/*width: 25%;*/
 }
 
 #photo-1 {
