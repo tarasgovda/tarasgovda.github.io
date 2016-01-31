@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="container-fluid full-height">
-		<div class="col-md-offset-2 col-md-8 main-column">
+		<div class="col-md-offset-2 col-md-8 col-lg-6 col-lg-offset-3 main-column">
 			<div class="header">
 				<!-- <h2>photography<h2> -->
 				photography
@@ -48,24 +48,24 @@
 				</div>
 			</nav>
 			<div class="row photo-section">
-				<div class="col-md-10 col-md-offset-1 full-height">
+				<div class="col-md-10 col-md-offset-1 col-lg-12 col-lg-offset-0 full-height">
 					<div class = "row photo-row">
-						<div id="photo-1" class="photo-div col-md-2"></div>
-						<div id="photo-2" class="photo-div col-md-2"></div>
-						<div id="photo-3" class="photo-div col-md-2"></div>
-						<div id="photo-4" class="photo-div col-md-2"></div>
+						<div id="photo-1" class="col-md-2 photo-div"></div>
+						<div id="photo-2" class="col-md-2 photo-div"></div>
+						<div id="photo-3" class="col-md-2 photo-div"></div>
+						<div id="photo-4" class="col-md-2 photo-div"></div>
 					</div>
 					<div class = "row photo-row">
-						<div id="photo-5" class="photo-div col-md-2"></div>
-						<div id="photo-6" class="photo-div col-md-2"></div>
-						<div id="photo-7" class="photo-div col-md-2"></div>
-						<div id="photo-8" class="photo-div col-md-2"></div>
+						<div id="photo-5" class="col-md-2 photo-div"></div>
+						<div id="photo-6" class="col-md-2 photo-div"></div>
+						<div id="photo-7" class="col-md-2 photo-div"></div>
+						<div id="photo-8" class="col-md-2 photo-div"></div>
 					</div>
 					<div class = "row photo-row">
-						<div id="photo-9" class="photo-div col-md-2"></div>
-						<div id="photo-10" class="photo-div col-md-2"></div>
-						<div id="photo-11" class="photo-div col-md-2"></div>
-						<div id="photo-12" class="photo-div col-md-2"></div>
+						<div id="photo-9" class="col-md-2 photo-div"></div>
+						<div id="photo-10" class="col-md-2 photo-div"></div>
+						<div id="photo-11" class="col-md-2 photo-div"></div>
+						<div id="photo-12" class="col-md-2 photo-div"></div>
 					</div>
 				</div>
 			</div>
@@ -82,6 +82,13 @@ $(document).ready(function() {
         var height = div.height();
 
         div.css('width', height);
+    }
+
+    function setResponsiveHeight(className) {
+       var div = $(className);
+        var width = div.width();
+
+        div.css('height', width);
     }
 </script>
 
