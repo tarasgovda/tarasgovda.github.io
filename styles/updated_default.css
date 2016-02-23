@@ -1,0 +1,63 @@
+@font-face{
+	font-family: "HeaderFont";
+  	src: url("../fonts/als-script/alsscrp.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "RegularFont";
+  	src: url("../fonts/ABEAKRG.TTF") format("truetype");
+}
+
+html, body {
+	background-color: #352F2F;
+	/*background: url("../images/background.jpg");*/
+}
+
+.full-height {
+	height: 100%;
+	text-align: center;
+}
+
+.main-column {
+	background-color: white;
+	text-align: center;
+}
+
+.header {
+	text-align: center;
+	display: inline-block;
+	background: url("../images/2.jpg");
+	width: 40vh;
+	background-size: 100% 100%;
+}
+
+.sofaa-name {
+	font-size: 60px;
+}
+
+.main-navbar {
+	background-color: transparent;
+	border-color: transparent;
+	font-size: 24px;
+	font-family: "RegularFont";
+	min-height: 7%;
+}
+	
+.navbar-center {
+	width: 100%;
+	text-align: center;
+}
+
+.list-div {
+	display: inline-block;
+}
+
+.main-section {
+	margin-top: 3%;
+}
+
+
+.photo-row {
+	margin: 0 auto;
+	margin-bottom: 1.5%;
+}

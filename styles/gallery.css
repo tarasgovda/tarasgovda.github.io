@@ -1,0 +1,73 @@
+.element-div {
+	margin-right: 5%;
+	margin-left: 5%;
+	margin-bottom: 3%;
+	height: 25vh;
+	float: left;
+	font-family: "RegularFont";
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	transition-duration: 1s;
+	line-height: 25vh;
+	vertical-align: middle;
+}
+
+.element-div:not(:hover) {
+	opacity: 0.85;
+}
+
+/*.element-div p {
+	margin-top: 42%
+}*/
+
+.element-div2 {
+	margin-right: 5%;
+	margin-left: 5%;
+	margin-bottom: 3%;
+	height: 26vh;
+	/*float: left;*/
+	font-family: "RegularFont";
+	font-size: 26px;
+	text-align: center;
+	color: white;
+	transition-duration: 1s;
+	line-height: 26vh;
+	vertical-align: middle;
+}
+
+.element-div2:not(:hover) {
+	opacity: 0.85;
+}
+
+.content {
+	margin: 0 auto;
+}
+
+#elem-1 {
+	background:url("../images/gallery/IMG_6202.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#elem-2 {
+	background:url("../images/gallery/Wedding_sample.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#elem-3 {
+	background:url("../images/gallery/IMG_1240.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#elem-4 {
+	background:url("../images/gallery/culinary_sample.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}

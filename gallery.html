@@ -2,7 +2,7 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="styles/vendor/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/updated_default.css">
-	<link rel="stylesheet" type="text/css" href="styles/updated_home.css">
+	<link rel="stylesheet" type="text/css" href="styles/gallery.css">
 	<script src="scripts/vendor/jquery-1.11.0.min.js"></script>
 	<script src="scripts/vendor/bootstrap.min.js"></script>
 	<title>Sofiia Lupul</title>
@@ -27,7 +27,7 @@
     				<div class="list-div">
 			      		<ul class="nav navbar-nav navbar-margin">
 					      	<li>
-							  <a href="gallery.html">Gallery</a>
+							  <a href="portfolio.html">Gallery</a>
 							</li>
 					        <li>
 							  <a href="about.htm">About</a>
@@ -44,31 +44,11 @@
 				</div>
 			</nav>
 			<div class="row main-section">
-				<div class="full-height">
-					<div class = "row photo-row">
-						<div class="full-height">
-							<div id="photo-1" class="col-md-2 photo-div"></div>
-							<div id="photo-2" class="col-md-2 photo-div"></div>
-							<div id="photo-3" class="col-md-2 photo-div"></div>
-							<div id="photo-4" class="col-md-2 photo-div"></div>
-						</div>
-					</div>
-					<div class = "row photo-row">
-						<div class="full-height">
-							<div id="photo-5" class="col-md-2 photo-div"></div>
-							<div id="photo-6" class="col-md-2 photo-div"></div>
-							<div id="photo-7" class="col-md-2 photo-div"></div>
-							<div id="photo-8" class="col-md-2 photo-div"></div>
-						</div>
-					</div>
-					<div class = "row photo-row">
-						<div class="full-height">
-							<div id="photo-9" class="col-md-2 photo-div"></div>
-							<div id="photo-10" class="col-md-2 photo-div"></div>
-							<div id="photo-11" class="col-md-2 photo-div"></div>
-							<div id="photo-12" class="col-md-2 photo-div"></div>
-						</div>
-					</div>
+				<div class="row content">
+					<div id="elem-1" class="element-div"><p>Art</p></div>
+					<div id="elem-2" class="element-div"><p>Wedding</p></div>
+					<div id="elem-3" class="element-div"><p>Portraits</p></div>
+					<div id="elem-4" class="element-div"><p>Culinary</p></div>
 				</div>
 			</div>
 		</div>
@@ -77,7 +57,7 @@
 <script>
 
 $(document).ready(function() {
-	setResponsiveWidth('.photo-div');
+	setResponsiveWidth('.element-div');
 	setResponsiveHeight('.header');
 	});
 
@@ -95,7 +75,7 @@ $(document).ready(function() {
     }
 
     function setPhotoRowWidth(divWidth) {
-    	var row = $('.photo-row');
+    	var row = $('.content');
     	var resultWidth = 0;
     	var additionalWidth = divWidth * 5 / 100 * 8;
     	resultWidth = divWidth * 4 + additionalWidth;
